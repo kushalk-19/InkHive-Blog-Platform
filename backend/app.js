@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:8080']; // Specify the frontend origin
+const allowedOrigins = ['http://localhost:8080', 'https://inkhive-blog-platform.vercel.app']; // Specify the frontend origin
 
 app.use(express.json()); // Parse JSON bodies
 app.use(cookieParser()); // Enables to set and read cookies
@@ -38,3 +38,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
